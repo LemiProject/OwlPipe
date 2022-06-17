@@ -15,26 +15,29 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\owlpipe.h">
+    <ClInclude Include="owlpipe\owlpipe.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\owlpipeserver.h">
+    <ClInclude Include="owlpipe\owlpipeserver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\owlpipeclient.h">
+    <ClInclude Include="owlpipe\owlpipeclient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\owlpipeoptions.h">
+    <ClInclude Include="owlpipe\owlpipeoptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\owlpipeerrors.h">
+    <ClInclude Include="owlpipe\owlpipeerrors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\owlpipebaseio.h">
+    <ClInclude Include="owlpipe\owlpipebaseio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\owlclientslistener.h">
+    <ClInclude Include="owlpipe\owlclientslistener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

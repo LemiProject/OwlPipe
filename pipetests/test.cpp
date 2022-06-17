@@ -7,7 +7,7 @@
 #define PIPE_NAME "\\\\.\\pipe\\owltestpipe"
 #define PIPE_BUFFER_SIZE 1024
 
-#include "../include/owlpipe.h"
+#include "../owlpipe/owlpipe.h"
 
 HANDLE CreateJustWaitingPipeServer() {
 	HANDLE handle = CreateNamedPipe(PIPE_NAME, PIPE_ACCESS_DUPLEX,

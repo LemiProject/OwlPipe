@@ -25,16 +25,16 @@ namespace owlpipe {
 			return _handle;
 		}
 
-		owlio_result Write(const char* const data, size_t size) const {
+		owlio_result Write(const char* const data, const size_t size) const {
 			DWORD written;
-			auto result = WriteFile(GetHandle(), data, size, &written, 0);
-			return {written, (bool)result};
+			const auto result = WriteFile(GetHandle(), data, size, &written, 0);
+			return {written, static_cast<bool>(result)};
 		}
 
-		owlio_result Read(char* buf, size_t size) const {
+		owlio_result Read(char* buf, const size_t size) const {
 			DWORD read;
-			auto result = ReadFile(GetHandle(), buf, size, &read, 0);
-			return {read, (bool)result};
+			const auto result = ReadFile(GetHandle(), buf, size, &read, 0);
+			return {read, static_cast<bool>(result)};
 		}
 
 		owlio_result Write(const std::vector<char>& data) const {
@@ -48,7 +48,7 @@ namespace owlpipe {
 		std::string ReadToString(size_t size) const {
 			std::vector<char> buf(size, 0x0);
 			this->Read(buf.data(), size);
-			return std::string(buf.begin(), buf.end());
+			return { buf.begin(), buf.end() };
 		}
 
 		owlio_result WriteString(const std::string& str) const {
